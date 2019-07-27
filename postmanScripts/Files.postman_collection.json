@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "8f159d2a-a213-4bf9-80c3-98e77d92d728",
+		"name": "Files",
+		"description": "Files section of my project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3050/fileshare/files",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3050/fileshare/files",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3050",
+					"path": [
+						"fileshare",
+						"files"
+					]
+				},
+				"description": "Get all Files"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3050/fileshare/Search",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"searching\" : \"S\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3050/fileshare/Search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3050",
+					"path": [
+						"fileshare",
+						"Search"
+					]
+				},
+				"description": "Search through files using tags and names"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3050/fileshare/files",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"IceCream\",\r\n\"size\": 55,\r\n\"description\": \"I Scream for Ice Cream\",\r\n\"type\": \"IceCream\",\r\n\"file_location\": \"IceCream\",\r\n\"date_created\": \"27/02/2019\",\r\n\"date_modified\": \"22/02/2019\",\r\n\"checkedIn\": \"false\",\r\n\"author\": \"Jim\",\r\n\"tags\": \"IceCream, Fruity\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3050/fileshare/files",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3050",
+					"path": [
+						"fileshare",
+						"files"
+					]
+				},
+				"description": "Create a New File"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3050/fileshare/newVersion",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\": \"5c6b064ea93c0812505f1a46\",\n\"size\": 400,\n\"description\": \"Test Update\",\n\"type\": \".wav\",\n\"file_location\": \"holidays/lol/ice\",\n\"date_modified\": \"30/02/2019\",\n\"author\": \"Jim\"\n}\n               \n"
+				},
+				"url": {
+					"raw": "http://localhost:3050/fileshare/newVersion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3050",
+					"path": [
+						"fileshare",
+						"newVersion"
+					]
+				},
+				"description": "Update:\nAdd new Version to File"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3050/fileshare/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\" : \"5c699ae636c89b2c90056428\" }"
+				},
+				"url": {
+					"raw": "http://localhost:3050/fileshare/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3050",
+					"path": [
+						"fileshare",
+						"delete"
+					]
+				},
+				"description": "Deleting File"
+			},
+			"response": []
+		}
+	]
+}

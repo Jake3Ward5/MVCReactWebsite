@@ -1,1 +1,0 @@
-"c:\Program Files\mongoDB\mongodb\bin\mongod" --dbpath=.\data --nojournal
